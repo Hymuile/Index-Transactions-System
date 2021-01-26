@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+    	<!-- ================  LW begin=================           -->
+   
+     <servlet>
+    <servlet-name>security_user_data_action</servlet-name>
+    <servlet-class>security_user.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>security_user_data_action</servlet-name>
+    <url-pattern>/security_user_data_action</url-pattern>
+  </servlet-mapping>
+    	
+  <servlet>
+    <servlet-name>file_receiver</servlet-name>
+    <servlet-class>file.upload.FileReceiver</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>file_receiver</servlet-name>
+    <url-pattern>/file_receiver</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>file_dao</servlet-name>
+    <servlet-class>file.upload.FileDao</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>file_dao</servlet-name>
+    <url-pattern>/file_dao</url-pattern>
+  </servlet-mapping>
+  	
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>user.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>ForgetPwdServlet</servlet-name>
+    <servlet-class>user.ForgetPwdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgetPwdServlet</servlet-name>
+    <url-pattern>/ForgetPwdServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SendEmailServlet</servlet-name>
+    <servlet-class>user.SendEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendEmailServlet</servlet-name>
+    <url-pattern>/SendEmailServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>user.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>users_statistic_servlet_action</servlet-name>
+    <servlet-class>users.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>users_statistic_servlet_action</servlet-name>
+    <url-pattern>/users_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>users_list_servlet_action</servlet-name>
+    <servlet-class>users.list.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>users_list_servlet_action</servlet-name>
+    <url-pattern>/users_list_servlet_action</url-pattern>
+  </servlet-mapping>
+  <!-- 微信小程序 begin -->
+  <servlet>
+    <servlet-name>futures_index_servlet_action</servlet-name>
+    <servlet-class>futures.index_data.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>futures_index_servlet_action</servlet-name>
+    <url-pattern>/futures_index_servlet_action</url-pattern>
+  </servlet-mapping>  
+   <!-- 微信小程序 end -->
+    <display-name>GetIndexData</display-name>
+  <servlet>
+    <servlet-name>GetIndexData</servlet-name>
+    <servlet-class>futures.network.GetIndexData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetIndexData</servlet-name>
+    <url-pattern>/GetIndexData</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>futures.network.GetIndexData</listener-class>
+  </listener>
+     <!-- ================  LW end=================           -->
+     
+  	<!-- ================  HYX begin=================           -->
+  	<servlet>
+        <servlet-name>HoldDao</servlet-name>
+        <servlet-class>wechat_transaction.HoldDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HoldDao</servlet-name>
+        <url-pattern>/HoldDao</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SoldDao</servlet-name>
+        <servlet-class>wechat_transaction.SoldDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SoldDao</servlet-name>
+        <url-pattern>/SoldDao</url-pattern>
+    </servlet-mapping>
+  <servlet>
+        <servlet-name>LoginDao</servlet-name>
+        <servlet-class>wechat_transaction.LoginDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginDao</servlet-name>
+        <url-pattern>/LoginDao</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TelDao</servlet-name>
+        <servlet-class>wechat_transaction.TelDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TelDao</servlet-name>
+        <url-pattern>/TelDao</url-pattern>
+    </servlet-mapping>
+  
+  <servlet>
+        <servlet-name>SellDao</servlet-name>
+        <servlet-class>wechat_transaction.SellDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SellDao</servlet-name>
+        <url-pattern>/SellDao</url-pattern>
+    </servlet-mapping>
+  <servlet>
+        <servlet-name>BuyDao</servlet-name>
+        <servlet-class>wechat_transaction.BuyDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BuyDao</servlet-name>
+        <url-pattern>/BuyDao</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+    <servlet-name>project_post_servlet_action</servlet-name>
+    <servlet-class>project.post.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>project_post_servlet_action</servlet-name>
+    <url-pattern>/project_post_servlet_action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>post_statistic_servlet_action</servlet-name>
+    <servlet-class>post.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>post_statistic_servlet_action</servlet-name>
+    <url-pattern>/post_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+    	<!-- ================  HYX end=================           -->
+ 	<!-- ================  ANKAR begin=================           -->
+  	  <servlet>
+    <servlet-name>weather_statistic_servlet_action</servlet-name>
+    <servlet-class>weather.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>weather_statistic_servlet_action</servlet-name>
+    <url-pattern>/weather_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>weather_list_servlet_action</servlet-name>
+    <servlet-class>weather.list.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>weather_list_servlet_action</servlet-name>
+    <url-pattern>/weather_list_servlet_action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>news_statistic_servlet_action</servlet-name>
+    <servlet-class>news.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>news_statistic_servlet_action</servlet-name>
+    <url-pattern>/news_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>news_list_servlet_action</servlet-name>
+    <servlet-class>news.list.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>news_list_servlet_action</servlet-name>
+    <url-pattern>/news_list_servlet_action</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>weather_back_action</servlet-name>
+    <servlet-class>weather.back.action</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>weather_back_action</servlet-name>
+    <url-pattern>/weather_back_action</url-pattern>
+  </servlet-mapping> 
+     <listener>  
+		<listener-class>news.data.newsdata</listener-class>  
+	</listener>    
+     
+      <!-- ================  ANKAR end=================           -->
+       	  <servlet>
+    <servlet-name>property_manage_statistic_servlet_action</servlet-name>
+    <servlet-class>property_manage.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>property_manage_statistic_servlet_action</servlet-name>
+    <url-pattern>/property_manage_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>property_manage_list_servlet_action</servlet-name>
+    <servlet-class>property_manage.list.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>property_manage_list_servlet_action</servlet-name>
+    <url-pattern>/property_manage_list_servlet_action</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>property_manage_back_action</servlet-name>
+    <servlet-class>property_manage.back.action</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>property_manage_back_action</servlet-name>
+    <url-pattern>/property_manage_back_action</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- 持仓管理 -->
+  <servlet>
+    <servlet-name>bonds_manage_statistic_servlet_action</servlet-name>
+    <servlet-class>bonds_manage.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bonds_manage_statistic_servlet_action</servlet-name>
+    <url-pattern>/bonds_manage_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>bonds_manage_list_servlet_action</servlet-name>
+    <servlet-class>bonds_manage.list.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bonds_manage_list_servlet_action</servlet-name>
+    <url-pattern>/bonds_manage_list_servlet_action</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- ===资产（余额）管理====   -->
+  <servlet>
+    <servlet-name>money_manage_statistic_servlet_action</servlet-name>
+    <servlet-class>money_manage.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>money_manage_statistic_servlet_action</servlet-name>
+    <url-pattern>/money_manage_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>money_manage_list_servlet_action</servlet-name>
+    <servlet-class>money_manage.list.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>money_manage_list_servlet_action</servlet-name>
+    <url-pattern>/money_manage_list_servlet_action</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>money_manage_back_action</servlet-name>
+    <servlet-class>money_manage.back.action</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>money_manage_back_action</servlet-name>
+    <url-pattern>/money_manage_back_action</url-pattern>
+  </servlet-mapping> 
+ 	<!-- ================  WCL end=================           -->
+ 
+ 
+  <servlet>
+    <servlet-name>common_data_action</servlet-name>
+    <servlet-class>common.data_action</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>common_data_action</servlet-name>
+    <url-pattern>/common_data_action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>project_file_servlet_action</servlet-name>
+    <servlet-class>project.file.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>project_file_servlet_action</servlet-name>
+    <url-pattern>/project_file_servlet_action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>project_todo_servlet_action</servlet-name>
+    <servlet-class>project.todo.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>project_todo_servlet_action</servlet-name>
+    <url-pattern>/project_todo_servlet_action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>project_statistic_servlet_action</servlet-name>
+    <servlet-class>project.statistic.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>project_statistic_servlet_action</servlet-name>
+    <url-pattern>/project_statistic_servlet_action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>forum_file_servlet_action</servlet-name>
+    <servlet-class>forum.file.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>forum_file_servlet_action</servlet-name>
+    <url-pattern>/forum_file_servlet_action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>clinic_pay_servlet_action</servlet-name>
+    <servlet-class>clinic.pay.ServletAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>clinic_pay_servlet_action</servlet-name>
+    <url-pattern>/clinic_pay_servlet_action</url-pattern>
+  </servlet-mapping>
+</web-app>
