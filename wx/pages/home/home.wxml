@@ -1,0 +1,37 @@
+<!--pages/home/home.wxml-->
+<!--pages/user/user.wxml-->
+<view class="mine-wrapper">
+  <view class="avatar-wrapper1">
+    <view>
+      
+        <view wx:key="optional" wx:for="{{stockArray}}" wx:for-item="item" wx:for-index="index">
+          <view class="list_item" catchtap="onShowStockDetail" data-stock="{{item}}">
+            <text class="city">成都</text>
+             <text class="temp">({{item.temp}} ℃)</text>
+             <text class="text">{{item.text}}</text>
+            <text class="vis">(能见度：{{item.vis}})</text>
+          </view>
+        </view>
+      
+    </view>
+  </view>
+</view>
+<view class="mine-wrapper">
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+        <image style="border-radius:50%;" src="{{url}}"></image>
+      </view>
+      <view class="text">
+        <text>{{name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<button class="trade" bindtap="register">用户注册</button>
+
+<button class="trade" bindtap="login">用户登录</button>
+
+<button class="trade" bindtap="news">财经新闻</button>
+
+<button class="trade" bindtap="post">公告消息</button>

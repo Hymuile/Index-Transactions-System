@@ -1,0 +1,9 @@
+<!--pages/kline/kline.wxml-->
+<text>\r\n</text>
+<text>\r\n</text>
+<text>\r\n</text>
+<text>\r\n</text>
+<text>\r\n</text>
+<view>
+<image bindload="gifImgLoad" src="{{gifUrl}}"></image>
+</view>

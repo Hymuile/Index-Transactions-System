@@ -1,0 +1,79 @@
+page{
+  background: #eee;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.detail{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.bar{
+  display: flex;
+  flex-direction: row;
+  margin:20rpx 0;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.box{
+  width: 80%;
+  margin-top: 30rpx;
+  background-color: rgb(228, 164, 82);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.myview{
+  font-size: 80rpx;
+  color:#4a4aff;
+}
+.box1{
+  width: 40%;
+  margin-top: 35rpx;
+  background-color: rgb(23, 35, 104);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.box2{
+  width: 40%;
+  margin-top: 20rpx;
+  background-color: rgb(23, 35, 104);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.last{
+  font-size:20px;
+  font-style: italic;
+  text-align: center;
+  margin-top:20px;
+}
+.swiper-image{
+  width:100%;
+}
+.swiper-image image{
+  width:100%;
+}
+.img{
+  width: 100%;
+}

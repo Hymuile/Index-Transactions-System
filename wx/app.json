@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/common/common",
+    "pages/kanpan/kanpan",
+    "pages/apply/apply",
+    "pages/creator/creator",
+    "pages/pic/pic",
+    "pages/kline/kline",
+    "pages/year/year",
+    "pages/month/month",
+    "pages/upload_image/image",
+    "pages/own/own",
+    "pages/my/my",
+    "pages/home/home",
+    "pages/news/news",
+    "pages/pos/pos",
+    "pages/postContent/postContent",
+    "pages/newsUrl/newsUrl",
+    "pages/login/login"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#37383b",
+    "navigationBarTitleText": "weixin",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#09bb07",
+    "color": "#353535",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "行情",
+        "iconPath": "images/tab_optional_nor.png",
+        "selectedIconPath": "images/tab_optional_sel.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "自选",
+        "iconPath": "images/tab_kanpan_nor.png",
+        "selectedIconPath": "images/tab_kanpan_sel.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "个人中心",
+        "iconPath": "images/gerenzhongxin.png",
+        "selectedIconPath": "images/gerenzhongxin_active.png"
+      },
+      {
+        "pagePath": "pages/creator/creator",
+        "text": "关于我们",
+        "iconPath": "images/tab_haogu_nor.png",
+        "selectedIconPath": "images/tab_haogu_sel.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

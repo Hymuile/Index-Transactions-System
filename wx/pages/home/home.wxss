@@ -1,0 +1,110 @@
+/* pages/home/home.wxss */
+/* pages/user/user.wxss */
+.city{
+  font-size:70rpx;
+  margin-left: 30rpx;
+  color:white;
+}
+.temp{
+  font-size: 50rpx;
+  margin-left: 30rpx;
+  color: aquamarine;
+}
+.text{
+  font-size: 60rpx;
+  text-align: center;
+  margin-left: 60rpx;
+  color: gray;
+}
+.vis{
+  font-size: 40rpx;
+  text-align: right;
+  margin-left: 60rpx;
+  color: whitesmoke;
+
+}
+.avatar-wrapper1 {
+  background: burlywood;
+  padding: 10px 0;
+}
+.avatar-wrapper {
+  background: burlywood;
+  padding: 25px 0;
+}
+ 
+.avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+}
+ 
+.avatar-wrapper .avatar image {
+  width: 100px;
+  height: 100px;
+}
+ 
+.avatar-wrapper .text {
+  margin-left: auto;
+  color: #fff;
+}
+ 
+.listimg image {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+ 
+.content{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ 
+/*分割线样式*/
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+ 
+.arrows image {
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin-left: 500rpx;
+}
+
+ .trade {
+  width: 80%;
+  height: 90rpx;
+  margin-top: 20rpx;
+  background-color: rgb(201, 133, 44);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.trade:after{
+  content: "";
+  background: rgb(22, 211, 179);
+  position: absolute; 
+  width: 3000rpx;
+  height: 3000rpx;
+  left: calc(50% - 375rpx);
+  top: calc(50% - 375rpx);
+  opacity: 0;
+  margin: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
+
+}
+
+.trade:active:after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
+ }

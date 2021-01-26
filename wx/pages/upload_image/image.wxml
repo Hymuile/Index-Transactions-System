@@ -1,0 +1,43 @@
+<view class="numberInfo">
+注册信息录入</view>
+ 
+<view class="container">
+ 
+  <view class="lineHeight" type="number">手机号
+     <input class='input' placeholder='请输入手机号' bindinput="telInput"></input>
+  </view>
+    <view class="lineHeight" type="text">姓名
+     <input class='input-15' placeholder='姓名' bindinput="nameInput"></input>
+  </view>
+  <view class="lineHeight" type="text">
+      <view class="section">
+          <picker
+             mode="region"
+             bindchange="bindRegionChange"
+             value="{{region}}"
+             custom-item="{{customItem}}"
+          >
+            <view class="picker">
+              所在城市 <text class='select'>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+            </view>
+         </picker>
+    </view>
+  </view>
+</view>
+ 
+<view class="weui-uploader">
+  <view class="img-v weui-uploader__bd">
+    <view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image class='weui-uploader__img '
+                src="{{item}}"
+                data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+                  <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+        </image>
+    </view>
+     
+      <!-- 用来提示用户上传图片 -->
+      <view class="weui-uploader__input-box pic" bindtap="chooseImg"> </view>
+  </view>
+  <button class="upload-img-btn" bindtap="chooseImg" type='primary'>拍照  / 上传</button>
+  <button class="upload-img-btn" bindtap="submitRegister" type='primary'>提交</button>
+</view>

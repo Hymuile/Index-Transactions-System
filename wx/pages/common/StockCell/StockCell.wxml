@@ -1,0 +1,15 @@
+<template name="StockCell">
+  <view class="lisetview_data_container" hover="true" hover-class="navigator-hover" data-item="{{data}}" bindtap="onItemClickEvent">
+    <view class="lisetview_item_left_container">
+      <text class="S5 T3">{{data.name}}</text>
+      <text class="S1 T2">{{data.code}}</text>
+    </view>
+    <text class="S7 T3 lisetview_item_middle_container">{{data.suspension==1?'--':data.price}}</text>
+    <view class="lisetview_item_zdf_container">
+      <view class="listview_item_zdf_bg {{data.zdf>0?'C1-bg':(data.zdf<0?'C2-bg':'B5')}}">
+        <text class="S7 T4 listview_item_zdf">{{data.suspension==1?'停牌':data.zdfDisplay}}</text>
+      </view>
+    </view>
+    <text class="S6 T2 lisetview_item_right_container">{{data.time}}</text>
+  </view>
+</template>

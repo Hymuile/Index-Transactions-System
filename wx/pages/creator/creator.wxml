@@ -1,0 +1,55 @@
+<swiper autoplay indicator-dots indicator-color="white" circular interval="3000">
+  
+  <swiper-item> 
+    <image class='img' mode="widthFix" src="../../images/lunbotuone.jpg"></image>
+  </swiper-item>
+  <swiper-item> 
+    <image class='img' mode="widthFix" src="../../images/lunbotutwo.jpg"></image>
+  </swiper-item>
+  <swiper-item> 
+    <image class='img' mode="widthFix" src="../../images/lunbotuthree.jpg"></image>
+  </swiper-item>
+
+</swiper>
+
+<view class='container'>
+  
+    <view class='detail'>
+      <view class='bar'>
+      <view class='box1'>
+      <text>开发人员</text>
+      </view>
+      
+     </view>
+    <view class='bar'>
+      <view class='box'>
+      <text decode="{{true}}">贺宇瑄</text>
+      </view>
+
+     </view>
+    <view class='bar'>
+      <view class='box'>
+      <text decode="{{true}}">刘威</text>
+      </view>
+      
+    
+    </view>
+    <view class='bar'>
+      <view class='box'>
+      <text decode="{{true}}">艾尼卡尔江·艾买提</text>
+      </view>
+     
+    </view>
+    <view class='bar'>
+      <view class='box'>
+      <text decode="{{true}}">吴承隆</text>
+      </view>
+    </view>
+    <view class='bar'>
+      <view class='box2'>
+      <text>XM09</text>
+      </view>
+      
+     </view>
+  </view>
+</view>

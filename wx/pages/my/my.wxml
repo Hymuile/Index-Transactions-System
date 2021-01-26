@@ -1,0 +1,36 @@
+<import src="../common/SearchBar/SearchBar.wxml" />
+<import src="../common/line.wxml" />
+<view style="position:relative;">
+
+ 
+  <view class="container_h-header B1">
+    <text class="S2 T2 optional-header-sortlable_left">名称</text>
+    <text class="S2 T2 optional-header-sortlable_center">最新价</text>
+    <text class="S2 T2 optional-header-sortlable_right">持有量</text>
+  </view>
+  <!--列表-->
+  <block wx:key="optional" wx:for="{{stockArray}}" wx:for-item="item" wx:for-index="index">
+    <view class="list_item" catchtap="onShowStockDetail" data-stock="{{item}}">
+      
+      <text class="item_name T3 S5">{{item.indexName}}</text>
+      <text class="item_code T3 S5">{{item.latestPrice}}</text>
+      <text class="item_num T3 S5">{{item.hold}}</text>
+      <image id="{{index}}" src="{{item.optionPath}}" mode="aspectFit" catchtap="onAddOrDelStock"></image>
+    </view>
+    <template is="lineView"></template>
+  </block>
+
+</view>
+<text>\r\n</text>
+
+<view class="container">
+  <view class="lineHeight" type="number">期货名
+     <input class='input' placeholder='请输入期货名称' bindinput="nameInput"></input>
+  </view>
+  <view class="lineHeight" type="number">数量
+     <input class='input' placeholder='请输入卖出的数量' bindinput="numInput"></input>
+  </view>
+</view>
+<text>\r\n</text>
+<button class="upload-img-btn" bindtap="sure" type='primary'>确认输入</button>
+<button class="upload-img-btn" bindtap="submit" type='primary'>卖出</button>

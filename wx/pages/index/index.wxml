@@ -1,0 +1,21 @@
+<import src="../common/SearchBar/SearchBar.wxml" />
+<import src="../common/line.wxml" />
+<view style="position:relative;">
+
+ 
+  <view class="container_h-header B1">
+    <text class="S2 T2 optional-header-sortlable_left">名称</text>
+    <text class="S2 T2 optional-header-sortlable_center">代号</text>
+  </view>
+  <!--列表-->
+  <block wx:key="optional" wx:for="{{stockArray}}" wx:for-item="item" wx:for-index="index">
+    <view class="list_item" catchtap="onShowStockDetail" data-stock="{{item}}">
+      <txt class="item_type C3-font S1" style="border-width:1px">期货</txt>
+      <text class="item_name T3 S5">{{item.indexName}}</text>
+      <text class="item_code T1 S7">{{item.indexId}}</text>
+      <image id="{{index}}" src="{{item.optionPath}}" mode="aspectFit" catchtap="onAddOrDelStock"></image>
+    </view>
+    <template is="lineView"></template>
+  </block>
+
+</view>

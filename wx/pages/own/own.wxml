@@ -1,0 +1,62 @@
+<!--pages/own/own.wxml-->
+<import src="../common/SearchBar/SearchBar.wxml" />
+<import src="../common/line.wxml" />
+
+<view style="position:relative;">
+
+ 
+  <view class="container_h-header B1">
+    <text class="S2 C1-font optional-header-sortlable_left">名称</text>
+    <text class="S2 C1-font optional-header-sortlable_center">昨日收盘价</text>
+    <text class="S2 C1-font optional-header-sortlable_right">今日开盘价</text>
+  </view>
+  <!--列表-->
+  <block wx:key="optional" wx:for="{{stockArray}}" wx:for-item="item" wx:for-index="index">
+    <view class="list_item" catchtap="onShowStockDetail" data-stock="{{item}}">
+      <text class="item_name T3 S5">{{item.indexName}}</text>
+      <text class="item_code T3 S5">{{item.priceYes}}</text>
+      <text class="item_price T3 S5">{{item.priceTo}}</text>
+      <image id="{{index}}" src="{{item.optionPath}}" mode="aspectFit" catchtap="onAddOrDelStock"></image>
+    </view>
+    <template is="lineView"></template>
+  </block>
+  <view class="container_h-header B1">
+    <text class="S2 C1-font optional-header-sortlable_left">最新价</text>
+    <text class="S2 C1-font optional-header-sortlable_center">最高价</text>
+    <text class="S2 C1-font optional-header-sortlable_right">最低价</text>
+  </view>
+  <block wx:key="optional" wx:for="{{stockArray}}" wx:for-item="item" wx:for-index="index">
+    <view class="list_item" catchtap="onShowStockDetail" data-stock="{{item}}">
+      <text class="item_name T3 S5">{{item.latestPrice}}</text>
+      <text class="item_code T3 S5">{{item.high}}</text>
+      <text class="item_price T3 S5">{{item.low}}</text>
+      <image id="{{index}}" src="{{item.optionPath}}" mode="aspectFit" catchtap="onAddOrDelStock"></image>
+    </view>
+    <template is="lineView"></template>
+  </block>
+  <view class="container_h-header B1">
+    <text class="S2 C1-font optional-header-sortlable_left">买入价</text>
+    <text class="S2 C1-font optional-header-sortlable_center">卖出价</text>
+    <text class="S2 C1-font optional-header-sortlable_right">持仓量</text>
+  </view>
+  <block wx:key="optional" wx:for="{{stockArray}}" wx:for-item="item" wx:for-index="index">
+    <view class="list_item" catchtap="onShowStockDetail" data-stock="{{item}}">
+      <text class="item_name T3 S5">{{item.buy}}</text>
+      <text class="item_code T3 S5">{{item.sell}}</text>
+      <text class="item_price T3 S5">{{item.have}}</text>
+      <image id="{{index}}" src="{{item.optionPath}}" mode="aspectFit" catchtap="onAddOrDelStock"></image>
+    </view>
+    <template is="lineView"></template>
+  </block>
+</view>
+<text>\r\n</text>
+<view class="container">
+ 
+   <view class="lineHeight" type="text">数量
+    <input class='input-15' placeholder='请输入开仓数量' bindinput="numInput"></input>
+ </view>
+
+</view>
+<text>\r\n</text>
+<text>\r\n</text>
+<button class="upload-img-btn" bindtap="submit" type='primary'>确认</button>

@@ -1,0 +1,47 @@
+/**app.wxss**/
+@import "/pages/common/colors.wxss";
+@import "/pages/common/fonts.wxss";
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.container_h {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container_h-justify {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.item_select {
+  background-color: rgb(248, 248, 248);
+}
+
+.icon_search {
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  z-index: 500;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 12rpx;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#36383C",
+	"navigationBarTextStyle": "white",
+	"navigationBarTitleText": "自选仓库",
+	"enablePullDownRefresh": false
+}

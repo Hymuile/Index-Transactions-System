@@ -1,0 +1,18 @@
+<text>\r\n</text>
+<text>\r\n</text>
+<text>\r\n</text>
+ 
+<view class="container">
+ 
+  <view class="lineHeight" type="number">手机号
+     <input class='input' placeholder='请输入手机号' bindinput="telInput"></input>
+  </view>
+    
+</view>
+<text>\r\n</text>
+<view class="weui-uploader">
+ 
+  <button class="upload-img-btn" bindtap="confirm" type='primary'>确认输入</button>
+  <text>\r\n</text>
+  <button class="upload-img-btn" bindtap="submit" type='primary'>登录</button>
+</view>

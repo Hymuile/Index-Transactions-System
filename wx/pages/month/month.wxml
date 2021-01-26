@@ -1,0 +1,7 @@
+<!--pages/month/month.wxml-->
+<text>\r\n</text>
+<text>\r\n</text>
+<text>\r\n</text>
+<text>\r\n</text>
+<text>\r\n</text>
+<image bindload="gifImgLoad" src="{{gifUrl}}"></image>
